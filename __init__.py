@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:Abcde@12345@localhost/test"
 # get environment variable
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
